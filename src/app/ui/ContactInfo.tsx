@@ -1,13 +1,15 @@
-export default function ContactInfo({ inletOptions = [] }: { inletOptions: ReadonlyArray<String> }) {
-  const inletOption = inletOptions.length > 0 ? inletOptions[0] : {};
+import { fetchProfileData } from '@/app/lib/fetches';
+
+export default async function ContactInfo() {
+  const results = await fetchProfileData(); 
   
   return (
     <div className='d-flex flex-column border p-3 '>
-        <div>MY NAME</div>
-        <div>EMAIL</div>
-        <div>GITHUB LINK</div>
-        <div>LINKEDID LINK</div>
-        <div>ACCESS TO RESUME</div>
+      <div>{ results.name }</div>
+      <div>{ results.email }</div>
+      <div>{ results.github }</div>
+      <div>{ results.linkedin }</div>
+      <div>{ results.resume }</div>
     </div>
   );
 }

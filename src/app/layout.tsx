@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import SideBar from "./ui/SideBar";
+import SideBar from "@/app/ui/SideBar";
 
 
 
