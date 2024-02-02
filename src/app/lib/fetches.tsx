@@ -1,3 +1,5 @@
+import 'server-only'
+
 export const fetchProfileData = async () => {
     await new Promise(r => setTimeout(r, 2000));
     const res = await fetch('http://127.0.0.1:5000/personal-website/123');
