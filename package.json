@@ -10,10 +10,17 @@
     "test": "jest"
   },
   "dependencies": {
+    "@opentelemetry/api": "^1.7.0",
+    "@opentelemetry/auto-instrumentations-web": "^0.36.0",
+    "@opentelemetry/context-zone": "^1.21.0",
+    "@opentelemetry/resources": "^1.21.0",
+    "@opentelemetry/sdk-trace-web": "^1.21.0",
+    "@opentelemetry/semantic-conventions": "^1.21.0",
     "bootstrap": "^5.3.2",
     "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.2.1",
