@@ -1,0 +1,1 @@
+declare module 'how-i-built-this';

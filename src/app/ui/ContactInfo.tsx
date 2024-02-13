@@ -1,5 +1,5 @@
 import { fetchProfileData } from '@/app/lib/fetches';
-import HowIBuiltThisWrapper from '@/app/ui/HowIBuiltThisWrapper';
+import { HowIBuiltThisWrapper } from 'how-i-built-this';
 
 export default async function ContactInfo() {
   const results = await fetchProfileData(); 
