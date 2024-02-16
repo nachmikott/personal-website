@@ -2,51 +2,35 @@ import Link from 'next/link'
 
 const links = [
     {
-        name: 'About',
-        href: '/about'
+        name: 'Resume',
+        href: '/resume'
     },
     {
-        name: 'How I Built This',
-        href: '/how-i-built-this'
+        name: 'Points Of Interest',
+        href: '/points-of-interest'
     },
     {
-        name: 'Coding',
-        href: '/points-of-interest/coding'
+        name: 'Now',
+        href: '/now'
     },
-    { 
-        name: 'Cooking', 
-        href: '/points-of-interest/cooking'
-    },
-    { 
-        name: 'Travel', 
-        href: '/points-of-interest/travel'
-    },
-    { 
-        name: 'Woodworking', 
-        href: '/points-of-interest/woodworking'
-    },
-    { 
-        name: 'How I Built This', 
-        href: '/how-i-built-this'
-    }
+
 ];
 
 export default async function Navigation() {
-    return (<nav className='d-flex flex-column flex-grow-1 border'>
-        <ul className='list-unstyled'>
+    return (<nav>
+        <ul className='list-unstyled d-flex justify-content-end'>
             {  
                 links.map(link => {
                     return <li>
                         <Link key={link.name}
                             href={link.href}
-                            className='d-flex align-items-center text-danger'
+                            className='d-flex align-items-center px-1'
                         >
-                            <div className='pe-1'>{ 'Icon   '} </div>
-                            <div>{ link.name }</div>
+                            { link.name }
                         </Link>
                     </li>
                 })
             }
         </ul>
-    </nav>)
+    </nav>);
 }
